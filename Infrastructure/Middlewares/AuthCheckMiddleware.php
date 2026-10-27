@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
 use Flexi\Contracts\Interfaces\EventBusInterface;
 use Flexi\Contracts\Interfaces\SessionStorageInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Events\AuthEvent;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
+use Flexi\Modules\Auth\Domain\Events\AuthEvent;
+use Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

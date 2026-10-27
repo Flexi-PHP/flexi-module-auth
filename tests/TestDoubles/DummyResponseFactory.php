@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles;
+namespace Flexi\Modules\Auth\Tests\TestDoubles;
 
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseFactoryInterface;

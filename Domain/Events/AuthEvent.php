@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Domain\Events;
+namespace Flexi\Modules\Auth\Domain\Events;
 
 use Flexi\Contracts\Interfaces\EventInterface;
 

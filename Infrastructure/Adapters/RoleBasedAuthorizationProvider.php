@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Adapters;
+namespace Flexi\Modules\Auth\Infrastructure\Adapters;
 
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\AuthorizationProviderInterface;
+use Flexi\Modules\Auth\Domain\Interfaces\AuthorizationProviderInterface;
 
 /**
  * RoleBasedAuthorizationProvider - Role-Based Access Control (RBAC)

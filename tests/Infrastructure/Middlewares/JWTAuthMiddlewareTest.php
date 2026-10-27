@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Tests\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Tests\Infrastructure\Middlewares;
 
 use Flexi\Contracts\Interfaces\SecretProviderInterface;
-use CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares\JWTAuthMiddleware;
-use CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles\DummyResponseFactory;
-use CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles\TestHttpHandler;
+use Flexi\Modules\Auth\Infrastructure\Middlewares\JWTAuthMiddleware;
+use Flexi\Modules\Auth\Tests\TestDoubles\DummyResponseFactory;
+use Flexi\Modules\Auth\Tests\TestDoubles\TestHttpHandler;
 use Firebase\JWT\JWT;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;

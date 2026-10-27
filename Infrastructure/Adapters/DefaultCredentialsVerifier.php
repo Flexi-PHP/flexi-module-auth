@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Adapters;
+namespace Flexi\Modules\Auth\Infrastructure\Adapters;
 
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
 
 /**
  * DefaultCredentialsVerifier - Secure password verification

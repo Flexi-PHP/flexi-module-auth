@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects;
+namespace Flexi\Modules\Auth\Domain\ValueObjects;
 
 /**
  * AuthenticationResult ValueObject

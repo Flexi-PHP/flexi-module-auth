@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Tests\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Tests\Infrastructure\Middlewares;
 
 use Flexi\Contracts\Interfaces\EventBusInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
-use CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares\BasicAuthMiddleware;
-use CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles\DummyResponseFactory;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Modules\Auth\Infrastructure\Middlewares\BasicAuthMiddleware;
+use Flexi\Modules\Auth\Tests\TestDoubles\DummyResponseFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ServerRequestInterface;

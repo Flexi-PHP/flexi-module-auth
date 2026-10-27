@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Adapters;
+namespace Flexi\Modules\Auth\Infrastructure\Adapters;
 
 use Flexi\Contracts\Interfaces\SecretProviderInterface;
 use Flexi\Contracts\Interfaces\ConfigurationInterface;

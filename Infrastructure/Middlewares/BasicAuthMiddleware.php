@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
 use Flexi\Contracts\Interfaces\EventBusInterface;
 use Flexi\Contracts\Interfaces\SessionStorageInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Events\AuthEvent;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthenticationResult;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Modules\Auth\Domain\Events\AuthEvent;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
+use Flexi\Modules\Auth\Domain\ValueObjects\AuthenticationResult;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

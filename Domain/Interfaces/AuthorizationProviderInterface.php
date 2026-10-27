@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces;
+namespace Flexi\Modules\Auth\Domain\Interfaces;
 
 /**
  * AuthorizationProviderInterface - Agnostic authorization verification

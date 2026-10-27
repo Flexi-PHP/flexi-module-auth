@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles;
+namespace Flexi\Modules\Auth\Tests\TestDoubles;
 
 use Flexi\Contracts\Classes\HttpHandler;
 use Psr\Http\Message\ResponseFactoryInterface;
