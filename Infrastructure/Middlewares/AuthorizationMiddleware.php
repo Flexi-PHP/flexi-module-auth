@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\EventBusInterface;
-use CubaDevOps\Flexi\Domain\Events\Event;
+use Flexi\Contracts\Interfaces\EventBusInterface;
+use Flexi\Domain\Events\Event;
 use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\AuthorizationProviderInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
 use Psr\Http\Message\ResponseFactoryInterface;

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace CubaDevOps\Flexi\Modules\Auth\Tests\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\EventBusInterface;
+use Flexi\Contracts\Interfaces\EventBusInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
 use CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares\BasicAuthMiddleware;
-use CubaDevOps\Flexi\Test\TestData\TestDoubles\DummyResponseFactory;
+use CubaDevOps\Flexi\Modules\Auth\Tests\TestDoubles\DummyResponseFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -40,7 +40,7 @@ class BasicAuthMiddlewareTest extends TestCase
         $this->middleware = new BasicAuthMiddleware(
             $this->repository,
             $this->verifier,
-            $this->createMock(\CubaDevOps\Flexi\Contracts\Interfaces\SessionStorageInterface::class),
+            $this->createMock(\Flexi\Contracts\Interfaces\SessionStorageInterface::class),
             $this->response_factory,
             $this->event_bus,
             $this->logger

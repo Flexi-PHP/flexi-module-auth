@@ -1,11 +1,11 @@
 {
   "services": [
     {
-      "name": "CubaDevOps\\Flexi\\Contracts\\Interfaces\\SecretProviderInterface",
+      "name": "Flexi\\Contracts\\Interfaces\\SecretProviderInterface",
       "class": {
         "name": "CubaDevOps\\Flexi\\Modules\\Auth\\Infrastructure\\Adapters\\ConfigurationSecretProvider",
         "arguments": [
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\ConfigurationInterface"
+          "@Flexi\\Contracts\\Interfaces\\ConfigurationInterface"
         ]
       }
     },
@@ -14,9 +14,9 @@
       "class": {
         "name": "CubaDevOps\\Flexi\\Modules\\Auth\\Infrastructure\\Middlewares\\AuthCheckMiddleware",
         "arguments": [
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
+          "@Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
           "@Psr\\Http\\Message\\ResponseFactoryInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\EventBusInterface",
+          "@Flexi\\Contracts\\Interfaces\\EventBusInterface",
           "@Psr\\Log\\LoggerInterface",
           "ENV.AUTH_SESSION_TIMEOUT"
         ]
@@ -27,7 +27,7 @@
       "class": {
         "name": "CubaDevOps\\Flexi\\Modules\\Auth\\Infrastructure\\Middlewares\\JWTAuthMiddleware",
         "arguments": [
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\SecretProviderInterface",
+          "@Flexi\\Contracts\\Interfaces\\SecretProviderInterface",
           "@Psr\\Http\\Message\\ResponseFactoryInterface"
         ]
       }
@@ -47,9 +47,9 @@
         "arguments": [
           "@CubaDevOps\\Flexi\\Modules\\Auth\\Domain\\Interfaces\\CredentialsRepositoryInterface",
           "@CubaDevOps\\Flexi\\Modules\\Auth\\Domain\\Interfaces\\CredentialsVerifierInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
+          "@Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
           "@Psr\\Http\\Message\\ResponseFactoryInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\EventBusInterface",
+          "@Flexi\\Contracts\\Interfaces\\EventBusInterface",
           "@Psr\\Log\\LoggerInterface"
         ]
       }
@@ -65,7 +65,7 @@
         "arguments": [
           "@CubaDevOps\\Flexi\\Modules\\Auth\\Domain\\Interfaces\\AuthorizationProviderInterface",
           "@Psr\\Http\\Message\\ResponseFactoryInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\EventBusInterface",
+          "@Flexi\\Contracts\\Interfaces\\EventBusInterface",
           "@Psr\\Log\\LoggerInterface"
         ]
       }
@@ -76,8 +76,8 @@
         "name": "CubaDevOps\\Flexi\\Modules\\Auth\\Infrastructure\\Controllers\\LoginController",
         "arguments": [
           "@Psr\\Http\\Message\\ResponseFactoryInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
-          "@CubaDevOps\\Flexi\\Contracts\\Interfaces\\EventBusInterface"
+          "@Flexi\\Contracts\\Interfaces\\SessionStorageInterface",
+          "@Flexi\\Contracts\\Interfaces\\EventBusInterface"
         ]
       }
     }

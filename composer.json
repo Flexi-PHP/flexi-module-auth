@@ -21,8 +21,10 @@
   ],
   "require": {
     "php": ">=7.4",
-    "cubadevops/flexi-contracts": "@dev",
-    "firebase/php-jwt": "^6.10"
+    "firebase/php-jwt": "^6.10",
+    "flexi/contracts": "^5.2.1",
+    "cubadevops/flexi-module-session": "^1.0",
+    "cubadevops/flexi-module-logging": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -43,7 +45,20 @@
         "authorization",
         "jwt-middleware",
         "basic-auth-middleware"
-      ]
+      ],
+      "schema-version": 1,
+      "compatibility": {
+        "core": "^3.2"
+      }
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CubaDevOps\\Flexi\\Modules\\Auth\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "guzzlehttp/psr7": "^2.7"
   }
 }

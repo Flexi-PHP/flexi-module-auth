@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Adapters;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\SecretProviderInterface;
-use CubaDevOps\Flexi\Infrastructure\Classes\Configuration;
+use Flexi\Contracts\Interfaces\SecretProviderInterface;
+use Flexi\Contracts\Interfaces\ConfigurationInterface;
 
 class ConfigurationSecretProvider implements SecretProviderInterface
 {
-    private Configuration $configuration;
+    private ConfigurationInterface $configuration;
 
-    public function __construct(Configuration $configuration)
+    public function __construct(ConfigurationInterface $configuration)
     {
         $this->configuration = $configuration;
     }
