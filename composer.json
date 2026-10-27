@@ -1,5 +1,5 @@
 {
-  "name": "cubadevops/flexi-module-auth",
+  "name": "flexi/flexi-module-auth",
   "description": "Authentication and Authorization module for Flexi Framework",
   "version": "2.0.0",
   "type": "flexi-module",
@@ -23,8 +23,8 @@
     "php": ">=7.4",
     "firebase/php-jwt": "^6.10",
     "flexi/contracts": "^5.2.1",
-    "cubadevops/flexi-module-session": "^2.0",
-    "cubadevops/flexi-module-logging": "^2.0",
+    "flexi/flexi-module-session": "^2.0",
+    "flexi/flexi-module-logging": "^2.0",
     "psr/container": "^2.0",
     "psr/http-message": "^2.0",
     "psr/http-server-handler": "^1.0",

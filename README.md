@@ -18,7 +18,7 @@ This module requires the Session and Logging modules for its configured services
 
 ## Install and activate
 
-Install `cubadevops/flexi-module-auth` with Composer, then activate the `Auth` module using the core module manager. Modules are inactive until explicitly activated.
+Install `flexi/flexi-module-auth` with Composer, then activate the `Auth` module using the core module manager. Modules are inactive until explicitly activated.
 
 ## Tests
 
