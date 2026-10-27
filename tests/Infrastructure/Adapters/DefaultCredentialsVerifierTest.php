@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Tests\Infrastructure\Adapters;
+namespace Flexi\Modules\Auth\Tests\Infrastructure\Adapters;
 
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
-use CubaDevOps\Flexi\Modules\Auth\Infrastructure\Adapters\DefaultCredentialsVerifier;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Modules\Auth\Infrastructure\Adapters\DefaultCredentialsVerifier;
 use PHPUnit\Framework\TestCase;
 
 class DefaultCredentialsVerifierTest extends TestCase

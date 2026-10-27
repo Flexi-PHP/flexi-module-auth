@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\EventBusInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\SessionStorageInterface;
-use CubaDevOps\Flexi\Domain\Events\Event;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
+use Flexi\Contracts\Interfaces\EventBusInterface;
+use Flexi\Contracts\Interfaces\SessionStorageInterface;
+use Flexi\Modules\Auth\Domain\Events\AuthEvent;
+use Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -128,7 +128,7 @@ final class AuthCheckMiddleware implements MiddlewareInterface
         ]);
 
         // Step 7: Dispatch session validation event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.session.validated',
             self::class,
             [
@@ -194,7 +194,7 @@ final class AuthCheckMiddleware implements MiddlewareInterface
         ]);
 
         // Dispatch event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.session.invalid',
             self::class,
             [

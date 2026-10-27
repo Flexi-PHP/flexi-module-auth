@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\EventBusInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\SessionStorageInterface;
-use CubaDevOps\Flexi\Domain\Events\Event;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthenticationResult;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Contracts\Interfaces\EventBusInterface;
+use Flexi\Contracts\Interfaces\SessionStorageInterface;
+use Flexi\Modules\Auth\Domain\Events\AuthEvent;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
+use Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
+use Flexi\Modules\Auth\Domain\ValueObjects\AuthenticationResult;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -117,7 +117,7 @@ final class BasicAuthMiddleware implements MiddlewareInterface
         ]);
 
         // Step 6: Dispatch authentication success event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authenticated',
             self::class,
             [
@@ -230,7 +230,7 @@ final class BasicAuthMiddleware implements MiddlewareInterface
         ]);
 
         // Dispatch authentication failed event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authentication.failed',
             self::class,
             [

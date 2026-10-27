@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\EventBusInterface;
-use CubaDevOps\Flexi\Domain\Events\Event;
-use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\AuthorizationProviderInterface;
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
+use Flexi\Contracts\Interfaces\EventBusInterface;
+use Flexi\Modules\Auth\Domain\Events\AuthEvent;
+use Flexi\Modules\Auth\Domain\Interfaces\AuthorizationProviderInterface;
+use Flexi\Modules\Auth\Domain\ValueObjects\AuthorizedUser;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -123,7 +123,7 @@ final class AuthorizationMiddleware implements MiddlewareInterface
         ]);
 
         // Step 5: Dispatch authorization success event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authorized',
             self::class,
             [
@@ -245,7 +245,7 @@ final class AuthorizationMiddleware implements MiddlewareInterface
             $event_data['username'] = $authorized_user->getUsername();
         }
 
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authorization.denied',
             self::class,
             $event_data

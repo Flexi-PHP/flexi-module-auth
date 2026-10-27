@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
+namespace Flexi\Modules\Auth\Infrastructure\Middlewares;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\SecretProviderInterface;
+use Flexi\Contracts\Interfaces\SecretProviderInterface;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Psr\Container\ContainerExceptionInterface;

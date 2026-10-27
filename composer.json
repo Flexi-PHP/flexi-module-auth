@@ -1,7 +1,7 @@
 {
-  "name": "cubadevops/flexi-module-auth",
+  "name": "flexi/flexi-module-auth",
   "description": "Authentication and Authorization module for Flexi Framework",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "flexi-module",
   "license": "MIT",
   "keywords": [
@@ -21,12 +21,20 @@
   ],
   "require": {
     "php": ">=7.4",
-    "cubadevops/flexi-contracts": "@dev",
-    "firebase/php-jwt": "^6.10"
+    "firebase/php-jwt": "^6.10",
+    "flexi/contracts": "^5.2.1",
+    "flexi/flexi-module-session": "^2.0",
+    "flexi/flexi-module-logging": "^2.0",
+    "psr/container": "^2.0",
+    "psr/http-message": "^2.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0",
+    "psr/log": "^1.1",
+    "psr/http-factory": "^1.0"
   },
   "autoload": {
     "psr-4": {
-      "CubaDevOps\\Flexi\\Modules\\Auth\\": ""
+      "Flexi\\Modules\\Auth\\": ""
     }
   },
   "extra": {
@@ -43,7 +51,20 @@
         "authorization",
         "jwt-middleware",
         "basic-auth-middleware"
-      ]
+      ],
+      "schema-version": 1,
+      "compatibility": {
+        "core": "^3.2"
+      }
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Flexi\\Modules\\Auth\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "guzzlehttp/psr7": "^2.7"
   }
 }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces;
+namespace Flexi\Modules\Auth\Domain\Interfaces;
 
-use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
+use Flexi\Modules\Auth\Domain\ValueObjects\Credentials;
 
 /**
  * CredentialsVerifierInterface - Verifies credentials against stored hash
