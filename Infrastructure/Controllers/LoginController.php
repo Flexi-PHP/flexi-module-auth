@@ -7,7 +7,7 @@ namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Controllers;
 use Flexi\Contracts\Classes\HttpHandler;
 use Flexi\Contracts\Interfaces\EventBusInterface;
 use Flexi\Contracts\Interfaces\SessionStorageInterface;
-use Flexi\Domain\Events\Event;
+use CubaDevOps\Flexi\Modules\Auth\Domain\Events\AuthEvent;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -78,7 +78,7 @@ final class LoginController extends HttpHandler
         }
 
         // Dispatch login success event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.login.success',
             self::class,
             [

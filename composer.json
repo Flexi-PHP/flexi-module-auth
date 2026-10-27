@@ -24,7 +24,12 @@
     "firebase/php-jwt": "^6.10",
     "flexi/contracts": "^5.2.1",
     "cubadevops/flexi-module-session": "^1.0",
-    "cubadevops/flexi-module-logging": "^1.0"
+    "cubadevops/flexi-module-logging": "^1.0",
+    "psr/container": "^2.0",
+    "psr/http-message": "^2.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0",
+    "psr/log": "^1.1"
   },
   "autoload": {
     "psr-4": {

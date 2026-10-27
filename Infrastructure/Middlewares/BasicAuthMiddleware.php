@@ -6,7 +6,7 @@ namespace CubaDevOps\Flexi\Modules\Auth\Infrastructure\Middlewares;
 
 use Flexi\Contracts\Interfaces\EventBusInterface;
 use Flexi\Contracts\Interfaces\SessionStorageInterface;
-use Flexi\Domain\Events\Event;
+use CubaDevOps\Flexi\Modules\Auth\Domain\Events\AuthEvent;
 use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsRepositoryInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\Interfaces\CredentialsVerifierInterface;
 use CubaDevOps\Flexi\Modules\Auth\Domain\ValueObjects\AuthenticationResult;
@@ -117,7 +117,7 @@ final class BasicAuthMiddleware implements MiddlewareInterface
         ]);
 
         // Step 6: Dispatch authentication success event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authenticated',
             self::class,
             [
@@ -230,7 +230,7 @@ final class BasicAuthMiddleware implements MiddlewareInterface
         ]);
 
         // Dispatch authentication failed event
-        $this->event_bus->dispatch(new Event(
+        $this->event_bus->dispatch(new AuthEvent(
             'user.authentication.failed',
             self::class,
             [
